@@ -243,6 +243,7 @@ SITE HEADER
         border-radius: 5px;
         text-align: right;
     }
+    
     .site-nav .menu-icon {
         display: block;
         float: right;
@@ -252,14 +253,17 @@ SITE HEADER
         padding-top: 10px;
         text-align: center;
     }
+
     .site-nav .trigger {
         clear: both;
         display: none;
     }
+
     .site-nav:hover .trigger {
         display: block;
         padding-bottom: 5px;
     }
+
     .site-nav .nav-link {
         display: block;
         padding: 5px 10px;
