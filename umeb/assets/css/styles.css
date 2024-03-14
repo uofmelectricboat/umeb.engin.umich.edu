@@ -233,7 +233,7 @@ SITE HEADER
     vertical-align: center;
 }
     
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 700px) {
     .site-nav {
         position: absolute;
         top: 34px;
@@ -243,7 +243,7 @@ SITE HEADER
         border-radius: 5px;
         text-align: right;
     }
-    
+
     .site-nav .menu-icon {
         display: block;
         float: right;
@@ -270,6 +270,28 @@ SITE HEADER
         margin-right: 0;
         margin-left: 20px;
     }
+}
+
+/*********************
+SITE FOOTER
+*********************/
+
+.site-footer {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+  
+.site-footer .row {
+    margin-bottom: 20px;
+}
+  
+.site-footer .socials-container, .site-footer .sponsors-container {
+    margin: 0px 10px;
+}
+
+.site-footer .social-icon, .site-footer .sponsor-logo {
+    margin: 0px 5px;
 }
 
 /******************************************************************
