@@ -3,23 +3,23 @@ FONTS
 *********************/
 @font-face {
     font-family: 'Supreme';
-    src: url('../fonts/Supreme-Variable.woff') format('woff');
-    font-weight: normal;
+    src: url('/assets/fonts/Supreme-Variable.woff2') format('woff2'),
+         url('/assets/fonts/Supreme-Variable.woff') format('woff');
+    font-weight: 100 800;
+    font-display: swap;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'BebasNeue';
-    src: url('../fonts/BebasNeue-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url('/assets/fonts/BebasNeue-Regular.woff') format('woff');
+    font-weight: 100 1000;
 }
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('../fonts/Satoshi-Variable.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src: url('/assets/fonts/Satoshi-Variable.woff') format('woff');
+    font-weight: 100 1000;
 }
 
 /*********************
@@ -31,7 +31,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
 }
 
 body {
-    font: 400 16px/1.5 'Supreme', Arial, sans-serif;
+    font: 400 16px 'Supreme', Arial, sans-serif;
     color: #00274C;
     background-color: #fdfdfd;
     -webkit-text-size-adjust: 100%;
@@ -60,7 +60,7 @@ li > ul, li > ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+    font-weight: 600;
 }
  
 a {
@@ -152,9 +152,8 @@ CUSTOM STYLING
     text-decoration: none;
     color: white;
     font-size: 0.9em;
-    font-size: 34px;
+    font-weight: 400;
     line-height: 34px;
-    font-weight: normal;
     padding: 0 24px;
     border-radius: 4px;
     border: 0;
@@ -197,7 +196,7 @@ SITE HEADER
 .site-header .trigger a {
     border-bottom: 0;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 700;
     text-transform: uppercase;
     color: #323944;
     margin-left: 20px;
@@ -210,7 +209,6 @@ SITE HEADER
 
 .site-title {
     font-size: 26px;
-    font-weight: normal;
     line-height: 56px;
     float: left;
 }
@@ -300,8 +298,76 @@ Author: Megan Miller (2024)
 Stylesheet: Homepage
 ******************************************************************/
 .home .hero {
-    background-image: url("../img/hero.jpg");
+    background-image: url("/assets/img/heros/main.jpg");
     background-position: center 58.5%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.home content {
+    flex: 1;
+    padding: 10vw;
+}
+
+.home .even-row, .home .odd-row {
+    display: flex;
+    align-items: stretch;
+    width: 100vw;
+    flex-direction: row;
+}
+
+.home .odd-row {
+    background-color: #D3E2F5;
+    flex-direction: row-reverse;
+}
+
+.home image {
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8vw;
+}
+
+.home .even-row content {
+    padding-right: 4vw;
+}
+
+.home .odd-row content {
+    padding-left: 4vw;
+}
+
+.home .even-row image {
+    padding: 0;
+    padding-right: 8vw;
+}
+
+.home .odd-row image {
+    padding: 0;
+    padding-left: 8vw;
+}
+
+.home image img {
+    width: 60vw;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .home .even-row, .home .odd-row {
+        flex-direction: column;
+    }
+
+    .home .even-row image, .home .odd-row image {
+        padding-left: 0;
+        padding-right: 0;
+        padding: 2vw 0;
+    }
+
+    .home image img {
+        width: 60vw;
+        padding: 0 4vw;
+        height: auto;
+    }
 }

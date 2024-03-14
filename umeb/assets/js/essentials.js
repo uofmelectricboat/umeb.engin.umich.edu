@@ -14,6 +14,7 @@ document.getElementById("umeb-header").innerHTML =
         + "<div class='trigger'>"
             + "<a class='nav-link' href='/'>Home</a>"
             + "<a class='nav-link' href='/boats'>Boats</a>"
+            + "<a class='nav-link' href='/team'>Team</a>"
             + "<a class='nav-link' href='/sponsor'>Sponsor</a>"
             + "<a class='nav-link' href='/contact'>Contact</a>"
             + "<a class='nav-link' href='/join'>Join</a>"
@@ -48,7 +49,7 @@ function fetchSocials() {
     .then(response => response.text())
     .then(data => {
         const socialsContainer = document.getElementById('socials-container');
-        parseCSV(data).forEach(social => {
+        parseSocialCSV(data).forEach(social => {
             const { name, imagePath, link } = social;
             const socialElement = document.createElement('a');
             socialElement.href = link;
@@ -74,7 +75,7 @@ function fetchSponsors() {
     });
 }
   
-function parseCSV(data) {
+function parseSocialCSV(data) {
     const rows = data.split('\n');
     return rows.slice(1).map(row => {
         const [name, path, link] = row.split(',');
