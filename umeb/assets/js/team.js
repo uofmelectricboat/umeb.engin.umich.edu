@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // TODO: linkedin links
+// TODO: split by subteam (see data/sponsors/)
 
 function loadTeam() {
     fetch('/assets/data/team.csv')
@@ -63,3 +64,35 @@ function parseTeamCSV(data) {
 
     return subteamsMap;
 }
+
+/*********************
+DEBOUNCING
+*********************/
+
+window.addEventListener('resize', function() {
+    updateBackgroundImagesDebounced(elementImageMap);
+});
+
+var updateBackgroundImagesDebounced = debounce(function(elementImageMap) {
+    for (const [elementId, imagePath] of Object.entries(elementImageMap)) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.style.backgroundImage = `url('${imagePath}')`;
+        }
+    }
+}, 20 * 60); // 20 minutes
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
