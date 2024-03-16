@@ -1,2 +1,5 @@
-name,subteam,role,image_path
-Megan Miller,Software,Software Lead,img/headshots/meganmiller.png
+name,major,subteam,role,image_path
+Arend Vyn,Mechanical Engineering,Leadership,Captain,/assets/img/headshots/arend_vyn.png
+Caroline Kawhati,Naval Architecture,Leadership,Chief Engineer,/assets/img/headshots/caroline_kawhati.png
+Michael Sharashenidze,Electrical Engineering,Directors,Electrical Director,/assets/img/headshots/michael_sharashenidze.png
+Megan Miller,Computer Science,Leads,Software Lead,/assets/img/headshots/megan_miller.png

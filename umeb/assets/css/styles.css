@@ -114,7 +114,7 @@ HEROS
 BANNERS
 *********************/
 
-.banner {
+banner {
     width: 100%;
     background-color: #00274C;
     color: #fdfdfd;
@@ -381,3 +381,12 @@ Author: Megan Miller (2024)
 Stylesheet: Team
 ******************************************************************/
 
+.members {
+    display: flex;
+    width: 100%;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+}

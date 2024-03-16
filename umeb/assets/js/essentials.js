@@ -108,7 +108,7 @@ function loadHeros() {
                 + `<div class='hero-content' style='height: 400px'></div>`
             + `</div>`
         } else {
-            console.error(`Could not find hero for id: ${elementId}`)
+            console.log(`Could not find hero for id: ${elementId}`)
         }
     }
 }
