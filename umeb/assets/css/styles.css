@@ -532,3 +532,20 @@ Stylesheet: Contact
 .contact-email {
     margin-bottom: 0;
 }
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Join
+******************************************************************/
+
+.google-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+iframe {
+    width: 80%;
+    height: 1500px;
+}
