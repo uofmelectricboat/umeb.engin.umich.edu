@@ -63,7 +63,7 @@ function fetchSocials() {
         });
     });
 }
-  
+
 function fetchSponsors() {
     fetch('/assets/data/sponsors/platinum.csv')
     .then(response => response.text())
@@ -71,8 +71,8 @@ function fetchSponsors() {
         const sponsorsContainer = document.getElementById('sponsors-container');
         parseCSV(data).forEach(sponsor => {
             const sponsorElement = document.createElement('div');
+            sponsorElement.className = 'sponsor-logo';
             sponsorElement.innerHTML = `<img src="${sponsor[1]}" alt="${sponsor[0]}" title="${sponsor[0]}" />`;
-            sponsorElement.classList.add('sponsor-logo');
             sponsorsContainer.appendChild(sponsorElement);
         });
     });

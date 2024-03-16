@@ -256,27 +256,28 @@ Stylesheet: Header + Footer
     margin: 0px 5px;
 }
 
-.site-footer .sponsors-container {
+#sponsors-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em; /* Space between items */
+    justify-content: center; /* Center items horizontally in the container */
+    align-items: center; /* Center items vertically in the container */
+    margin: 2em; /* Margin from the edge of the webview */
+    max-width: calc(100% - 4em); /* Ensure max width takes margins into account */
+}
+
+.sponsor-logo {
+    display: flex;
     justify-content: center;
-    padding: 1em;
-}
-
-.site-footer .sponsor-logo {
+    align-items: center;
     max-width: 150px;
-    margin: 0 auto;
-    text-align: center;
 }
 
-.site-footer .sponsor-logo img {
+.sponsor-logo img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin-bottom: 1em;
+    display: block; /* Helps center the image within the .sponsor-logo div */
 }
-
 
 /******************************************************************
 Author: Megan Miller (2024)
