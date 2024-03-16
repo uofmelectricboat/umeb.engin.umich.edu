@@ -65,14 +65,13 @@ function fetchSocials() {
 }
   
 function fetchSponsors() {
-    fetch('/assets/data/sponsors.csv')
+    fetch('/assets/data/sponsors/platinum.csv')
     .then(response => response.text())
     .then(data => {
         const sponsorsContainer = document.getElementById('sponsors-container');
         parseCSV(data).forEach(sponsor => {
-            const { name, logoPath } = sponsor;
             const sponsorElement = document.createElement('div');
-            sponsorElement.innerHTML = `<img src="${logoPath}" alt="${name}" title="${name}" />`;
+            sponsorElement.innerHTML = `<img src="${sponsor[1]}" alt="${sponsor[0]}" title="${sponsor[0]}" />`;
             sponsorElement.classList.add('sponsor-logo');
             sponsorsContainer.appendChild(sponsorElement);
         });

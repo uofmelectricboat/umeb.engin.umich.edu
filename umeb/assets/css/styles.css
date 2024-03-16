@@ -248,13 +248,35 @@ Stylesheet: Header + Footer
     margin-bottom: 20px;
 }
   
-.site-footer .socials-container, .site-footer .sponsors-container {
+.site-footer .socials-container {
     margin: 0px 10px;
 }
 
-.site-footer .social-icon, .site-footer .sponsor-logo {
+.site-footer .social-icon {
     margin: 0px 5px;
 }
+
+.site-footer .sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+}
+
+.site-footer .sponsor-logo {
+    max-width: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.site-footer .sponsor-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1em;
+}
+
 
 /******************************************************************
 Author: Megan Miller (2024)
