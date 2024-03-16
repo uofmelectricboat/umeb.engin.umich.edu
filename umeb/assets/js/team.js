@@ -18,15 +18,23 @@ function loadTeam() {
 
 function createSection(subteam, members) {
     const subteamContainer = document.createElement('div');
+    subteamContainer.className = 'subteam-container';
 
     const header = document.createElement('banner');
-    header.innerHTML = `<p>${subteam}</p>`;
+    header.innerHTML = `<h2>${subteam}</h2>`;
     subteamContainer.appendChild(header);
 
-    const membersContainer = document.createElement('members');
+    const membersContainer = document.createElement('div');
+    membersContainer.className = 'members-container';
     members.forEach(member => {
-        const memberContainer = document.createElement('member');
-        memberContainer.innerHTML = `<h3>${member.name}</h3><h4>${member.role}</h4><p>${member.major}</p>`;
+        const memberContainer = document.createElement('div');
+        memberContainer.className = 'member-container';
+        memberContainer.innerHTML = `
+            <img src="${member.imagePath}" alt="${member.name}" class="member-image">
+            <h3 class="member-name">${member.name}</h3>
+            ${member.role ? `<h4 class="member-role">${member.role}</h4>` : ''}
+            <p class="member-major">${member.major}</p>
+        `;
         membersContainer.appendChild(memberContainer);
     });
     subteamContainer.appendChild(membersContainer);
