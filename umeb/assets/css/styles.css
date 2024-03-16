@@ -111,20 +111,36 @@ HEROS
 }
 
 /*********************
-BANNERS
+BANNER
 *********************/
 
 .banner {
     width: 100%;
     background-color: #00274C;
-    color: #fdfdfd;
-    font-weight: 600;
-    font-size: 4.5vw;
+    text-align: center;
 }
 
-.banner h2 {
-    margin: 1em 0;
-    font-size: 1.5em;
+.banner p {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 36px;
+    color: #fdfdfd;
+}
+
+.banner-text {
+    margin: 20px;
+}
+
+.sub-banner {
+    background-color: #00274C;
+    text-align: center;
+}
+
+.sub-banner p {
+    padding: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fdfdfd;
 }
 
 /*********************
@@ -347,7 +363,7 @@ Stylesheet: Homepage
 }
 
 .home content, .home image {
-    margin: 10vw;
+    margin: 5vw 10vw;
 }
 
 .home .even-row content, .home .odd-row image {

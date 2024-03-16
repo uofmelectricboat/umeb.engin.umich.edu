@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTeam();
 });
 
+// TODO: linkedin links
+
 function loadTeam() {
     fetch('/assets/data/team.csv')
     .then(response => response.text())
@@ -20,8 +22,9 @@ function createSection(subteam, members) {
     const subteamContainer = document.createElement('div');
     subteamContainer.className = 'subteam-container';
 
-    const header = document.createElement('banner');
-    header.innerHTML = `<h2>${subteam}</h2>`;
+    const header = document.createElement('div');
+    header.className = 'sub-banner';
+    header.innerHTML = `<p>${subteam}</p>`;
     subteamContainer.appendChild(header);
 
     const membersContainer = document.createElement('div');
