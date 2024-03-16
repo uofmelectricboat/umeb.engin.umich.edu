@@ -74,12 +74,15 @@ a {
 }
 
 /*********************
-CUSTOM STYLING
+HEROS
 *********************/
 
 .hero {
-    background-color: #323944;
     height: 440px;
+    background-color: #323944;
+    background-position: center 58.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero .hero-content {
@@ -106,6 +109,22 @@ CUSTOM STYLING
         height: 600px;
     }
 }
+
+/*********************
+BANNERS
+*********************/
+
+.banner {
+    width: 100%;
+    background-color: #00274C;
+    color: #fdfdfd;
+    font-weight: 600;
+    font-size: 4.5vw;
+}
+
+/*********************
+CUSTOM STYLING
+*********************/
  
 .wrapper, .social-media-wrapper {
     max-width: -webkit-calc(1200px - (30px * 2));
@@ -297,22 +316,11 @@ Author: Megan Miller (2024)
 
 Stylesheet: Homepage
 ******************************************************************/
-.home .hero {
-    background-image: url("/assets/img/heros/main.jpg");
-    background-position: center 58.5%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.home content {
-    flex: 1;
-    padding: 10vw;
-}
 
 .home .even-row, .home .odd-row {
     display: flex;
     align-items: stretch;
-    width: 100vw;
+    width: 100%;
     flex-direction: row;
 }
 
@@ -321,35 +329,32 @@ Stylesheet: Homepage
     flex-direction: row-reverse;
 }
 
+.home content {
+    flex: 1;
+}
+
 .home image {
     flex: 0.8;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 8vw;
 }
 
-.home .even-row content {
-    padding-right: 4vw;
+.home content, .home image {
+    margin: 10vw;
 }
 
-.home .odd-row content {
-    padding-left: 4vw;
+.home .even-row content, .home .odd-row image {
+    margin-right: 2vw;
 }
 
-.home .even-row image {
-    padding: 0;
-    padding-right: 8vw;
-}
-
-.home .odd-row image {
-    padding: 0;
-    padding-left: 8vw;
+.home .odd-row content, .home .even-row image {
+    margin-left: 2vw;
 }
 
 .home image img {
-    width: 60vw;
+    max-width: 30vw;
     height: auto;
     object-fit: cover;
 }
@@ -359,15 +364,20 @@ Stylesheet: Homepage
         flex-direction: column;
     }
 
-    .home .even-row image, .home .odd-row image {
-        padding-left: 0;
-        padding-right: 0;
-        padding: 2vw 0;
+    .home content, .home image {
+        margin: 10vw;
+        align-items: center;
+        justify-content: center;
     }
 
     .home image img {
-        width: 60vw;
-        padding: 0 4vw;
-        height: auto;
+        max-width: 60vw;
     }
 }
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Team
+******************************************************************/
+
