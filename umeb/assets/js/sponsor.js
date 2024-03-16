@@ -1,34 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
-    loadSponsorSections('/assets/data/sponsors/platinum.csv')
-    .then(loadSponsorSections('/assets/data/sponsors/gold.csv'))
-    .then(loadSponsorLogos('/assets/data/sponsors/silver.csv'))
-    .then(loadSponsorLogos('/assets/data/sponsors/bronze.csv'));
+    loadSponsorSections('/assets/data/sponsors/platinum.csv', 'Platinum')
+    .then(() => loadSponsorSections('/assets/data/sponsors/gold.csv', 'Gold'))
+    .then(() => loadSponsorLogos('/assets/data/sponsors/silver.csv', 'Silver'))
+    .then(() => loadSponsorLogos('/assets/data/sponsors/bronze.csv', 'Bronze'))
+    .catch(err => console.error('Error loading CSV:', err));
 });
 
-function loadSponsorSections(filePath) {
-    fetch(filePath)
+function loadSponsorSections(filePath, banner) {
+    const sponsorsContainer = document.getElementById('umeb-sponsors');
+    loadBanner(sponsorsContainer, banner);
+
+    return fetch(filePath)
     .then(response => response.text())
     .then(data => {
-        const sponsorsContainer = document.getElementById('umeb-sponsors');
         parseCSV(data).forEach((sponsor, index) => {
-            const sponsor = createRow(sponsor, index);
-            sponsorsContainer.appendChild(sponsor);
+            const sponsorSection = createRow(sponsor, index);
+            sponsorsContainer.appendChild(sponsorSection);
         });
-    })
-    .catch(err => console.error('Error loading CSV:', err));
+    });
 }
 
-function loadSponsorLogos(filePath) {
-    fetch(filePath)
+function loadSponsorLogos(filePath, banner) {
+    const sponsorsContainer = document.getElementById('umeb-sponsors');
+    loadBanner(sponsorsContainer, banner);
+    
+    const cardContainer = document.createElement('div');
+    cardContainer.className = 'sponsor-card-container';
+    sponsorsContainer.appendChild(cardContainer);
+
+    return fetch(filePath)
     .then(response => response.text())
     .then(data => {
-        const sponsorsContainer = document.getElementById('umeb-sponsors');
         parseCSV(data).forEach((sponsor, index) => {
-            const sponsor = createCard(sponsor, index);
-            sponsorsContainer.appendChild(sponsor);
+            const sponsorCard = createCard(sponsor, index);
+            cardContainer.appendChild(sponsorCard);
         });
-    })
-    .catch(err => console.error('Error loading CSV:', err));
+    });
 }
 
 function createRow(sponsor, index) {
@@ -52,6 +59,13 @@ function createRow(sponsor, index) {
 function createCard(sponsor, index) {
     const sponsorCard = document.createElement('div');
     sponsorCard.className = 'sponsor-card';
-    sponsorCard.innerHTML = `<img src="${sponsor.imagePath}" alt="${sponsor.name}" class="sponsor-card-logo">`;
+    sponsorCard.innerHTML = `<img src="${sponsor[1]}" alt="${sponsor[0]}" class="sponsor-card-logo">`;
     return sponsorCard;
+}
+
+function loadBanner(container, banner) {
+    const header = document.createElement('div');
+    header.className = 'sub-banner';
+    header.innerHTML = `<p>${banner}</p>`;
+    container.appendChild(header);
 }

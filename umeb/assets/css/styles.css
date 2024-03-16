@@ -447,3 +447,30 @@ Stylesheet: Team
     margin: 0.25em 0;
     color: #555;
 }
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Sponsor
+******************************************************************/
+
+.sponsor-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+}
+
+.sponsor-card {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1em;
+}
