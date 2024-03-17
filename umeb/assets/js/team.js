@@ -10,7 +10,7 @@ function loadTeam() {
     .then(response => response.text())
     .then(data => {
         const teamContainer = document.getElementById('umeb-team');
-        const subteamsMap = parseTeamCSV(data);
+        const subteamsMap = compileSubteams(data);
         for (const [subteam, members] of subteamsMap.entries()) {
             const section = createSection(subteam, members);
             teamContainer.appendChild(section);
@@ -46,14 +46,16 @@ function createSection(subteam, members) {
     return subteamContainer;
 }
 
-function parseTeamCSV(data) {
+function compileSubteams(data) {
     const subteamsMap = new Map();
     const rows = data.split('\n');
 
     for (let i = 1; i < rows.length; i++) {
-        const [name, major, subteam, role, imagePath] = rows[i].split(',').map(item => item.trim());
-        
-        if (!name || !subteam || !major || !imagePath) continue;
+        [name, major, subteam, role, imagePath] = rows[i].split(',').map(item => item.trim());
+
+        if (!imagePath) {
+            imagePath = '/assets/img/headshots/default.png';
+        }
 
         if (!subteamsMap.has(subteam)) {
             subteamsMap.set(subteam, []);
