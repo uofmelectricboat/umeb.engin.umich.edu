@@ -137,9 +137,35 @@ Note that subteams on the webpage are ordered by ```subteams```.
 
 Leadership contact information is in the file ```umeb/assets/data/contact.csv```. On the website, this data is displayed on the "Contact" subpage.
 
+The columns in ```contact.csv``` are:
+* _name_ - contact name
+* _title_ - contact title/role
+* _email_ - umich email
+
+All admin and useful contacts for sponsors / potential new members should be included in this file.
+
+Update this file by adding/removing rows from ```contacts.csv```. Contacts will appear on the webpage in the same order as the CSV.
+
 ### Updating Team Social Media Accounts
 
 Team social media account data is in the file ```umeb/assets/data/socials.csv```. On the website, this data is displayed in the site footer.
+
+The columns in ```socials.csv``` are:
+* _name_ - social media website name
+* _image_path_ - relative path to SVG icon, rooted at ```umeb/```
+* _url_ - URL to team page on respective social media website
+
+#### Adding a Social Media Account
+
+Modify ```socials.csv``` to reflect the new social media account.
+
+Then put the social media website's logo SVG in ```umeb/assets/img/icons/``` and reflect the image's name in the image_path attribute of the CSV file. Edit the SVG so that ```width``` and ```height``` are ```48px``` and ```fill``` is ```#00274C``` (see other files in ```icons/``` as examples).
+
+Note that social media account will appear on the page in the same order as the CSV file.
+
+#### Removing a Social Media Account
+
+Simply remove the sponsor's row from the respective CSV file. We strongly recommend deleting the corresponding logo from ```umeb/assets/img/sponsors/```, but the logo will not show up without it's image_path in a CSV file.
 
 ### Updating Boats
 
