@@ -1,5 +1,14 @@
 # UMEB Website
 
+1. [Previewing the Website](#preview)
+2. [Updating the Website](#update)
+    - [Sponsors](#update-sponsors)
+    - [Team](#update-team)
+    - [Contact](#update-contact)
+    - [Social Media Pages](#update-social)
+    - [Boats](#update-boats)
+    - [Heros (Header Images)](#update-heros)
+
 ## TODOs:
 
 - [ ] Add pictures of the rest of the team to umeb/assets/img/headshots/
@@ -8,12 +17,11 @@
 - [ ] Add remaining sponsor website urls to umeb/assets/data/sponsors/
 - [ ] Embed sponsor packet to sponsor page
 - [ ] Add "Races" page with info from umeb.vercel.app
-- [ ] Fix "Team" page lag due to map implementation (consider diving subteams into separate CSVs -- like /sponsors/)
-- [ ] Write documentation for how to update various aspects of the site
+- [ ] Fix "Team" page lag due to map implementation (consider dividing subteams into separate CSVs -- like /sponsors/)
 - [ ] Integrate with Jekyll
 - [ ] Push site to umeb.engin.umich.edu
 
-## Previewing the Website
+## Previewing the Website <a name="preview"></a>
 
 Below are the steps to viewing this website locally:
 
@@ -52,7 +60,7 @@ Below are the steps to viewing this website locally:
 
 10. You can now preview the website. Any changes you make to the code will auto-update in the VS Code window (as well as in your browser if you copy-pasted the URL). You may have to refresh the window if you don't see your changes right away.
 
-## Updating the Website
+## Updating the Website <a name="update"></a>
 
 The site auto-updates based on CSV file data in ```umeb/assets/data/```, for the most part. There are specific instructions to update these files, as the JavaScript code expects a certain format. These expectations are outlined below.
 
@@ -63,7 +71,7 @@ Important CSV formatting notes:
 
 Changes beyond updating these files are non-trivial and require knowledge in HTML/CSS/JavaScript. Instructions to do this are not included below.
 
-### Updating Sponsors
+### Updating Sponsors <a name="update-sponsors"></a>
 
 Sponsor data is in ```umeb/assets/data/sponsors/``` in files ```platinum.csv```, ```gold.csv```, ```silver.csv```, and ```bronze.csv```. On the website, this data is displayed in the site footer and the "Sponsor" subpage.
 
@@ -86,7 +94,7 @@ Modify the respective CSV file to reflect the new sponsor. Then put the sponsor 
 
 Simply remove the sponsor's row from the respective CSV file. We strongly recommend deleting the corresponding logo from ```umeb/assets/img/sponsors/```, but the logo will not show up without it's image_path in a CSV file.
 
-### Updating Team Members
+### Updating Team Members <a name="update-team"></a>
 
 Team member data is in the file ```umeb/assets/data/team.csv```. On the website, this data is displayed on the "Team" subpage.
 
@@ -133,7 +141,7 @@ BEWARE: updating this variable will affect how ```team.csv``` is read. When edit
 
 Note that subteams on the webpage are ordered by ```subteams```.
 
-### Updating Leadership Contact Information
+### Updating Leadership Contact Information <a name="update-contact"></a>
 
 Leadership contact information is in the file ```umeb/assets/data/contact.csv```. On the website, this data is displayed on the "Contact" subpage.
 
@@ -146,7 +154,7 @@ All admin and useful contacts for sponsors / potential new members should be inc
 
 Update this file by adding/removing rows from ```contacts.csv```. Contacts will appear on the webpage in the same order as the CSV.
 
-### Updating Team Social Media Accounts
+### Updating Team Social Media Pages <a name="update-social"></a>
 
 Team social media account data is in the file ```umeb/assets/data/socials.csv```. On the website, this data is displayed in the site footer.
 
@@ -161,16 +169,42 @@ Modify ```socials.csv``` to reflect the new social media account.
 
 Then put the social media website's logo SVG in ```umeb/assets/img/icons/``` and reflect the image's name in the image_path attribute of the CSV file. Edit the SVG so that ```width``` and ```height``` are ```48px``` and ```fill``` is ```#00274C``` (see other files in ```icons/``` as examples).
 
-Note that social media account will appear on the page in the same order as the CSV file.
+Note that social media accounts will appear on the page in the same order as the CSV file.
 
 #### Removing a Social Media Account
 
-Simply remove the sponsor's row from the respective CSV file. We strongly recommend deleting the corresponding logo from ```umeb/assets/img/sponsors/```, but the logo will not show up without it's image_path in a CSV file.
+Simply remove the respective row from ```socials.csv```. We strongly recommend deleting the corresponding logo from ```umeb/assets/img/icons/```, but the logo will not show up without it's image_path in the CSV file.
 
-### Updating Boats
+### Updating Boats <a name="update-boats"></a>
 
 Boat data is in the file ```umeb/assets/data/boats.csv```. On the website, this data is displayed on the "Boats" subpage.
 
-### Updating Main Page
+The columns in ```boats.csv``` are:
+* _name_ - boat name
+* _image_path_ - relative path to image, rooted at ```umeb/```
+* _paragraph_ - one-paragraph description of the boat
 
-Main webpage data is in the file ```umeb/assets/data/values.csv```. On the website, this data is displayed on the "Home" page.
+Note that boats show up on the webpage in the same order as the CSV file.
+
+When adding rows, please insert a corresponding image in ```umeb/assets/img/boats/```. Please use the existing naming convention in that folder.
+
+When deleting/replacing rows, please delete the corresponding image from ```umeb/assets/img/boats/```.
+
+### Updating Main Page <a name="update-main"></a>
+
+Homepage data is in the file ```umeb/assets/data/values.csv```. On the website, this data is displayed on the "Home" page.
+
+The columns in ```values.csv``` are:
+* _name_ - section title
+* _image_path_ - relative path to image, rooted at ```umeb/```
+* _paragraph_ - one-paragraph description
+
+When adding rows, please insert a corresponding image in ```umeb/assets/img/values/```. Please use the existing naming convention in that folder.
+
+When deleting/replacing rows, please delete the corresponding image from ```umeb/assets/img/values/```.
+
+### Updates Header Images <a name="update-heros"></a>
+
+To update the image at the top of each page, navigate to ```umeb/assets/img/heros/```. Replace the respective subpage's image with the new image.
+
+If the filename must change (e.g. old filename is "main.jpg" but the new filename is "main.png"), you must also update the ```heros``` variable in ```umeb/assets/js/essentials.js```. This variable can be found in the ```loadHeros()``` function.
