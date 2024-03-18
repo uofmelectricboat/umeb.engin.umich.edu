@@ -26,7 +26,7 @@ Below are the steps to viewing this website locally:
 
 4. If neither of the above commands work, that means you have yet to set up a personal access token or SSH on your device. Follow:
    - [this guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to create a personal access token (recommended for single use)
-   - OR [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent to set up an SSH key (recommended for long-term use)
+   - OR [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to set up an SSH key (recommended for long-term use)
 
 5. Open a new window of VS Code. Open the "umeb.engin.umich.edu/umeb/" folder.
 
