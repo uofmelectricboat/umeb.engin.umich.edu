@@ -24,6 +24,7 @@ Below are the steps to viewing this website locally:
 3. Run the command:
    - ```git clone https://github.com/uofmelectricboat/umeb.engin.umich.edu.git``` (to use your personal access token)
    - OR ```git clone git@github.com:uofmelectricboat/umeb.engin.umich.edu.git``` (to use your SSH key)
+   - ALTERNATIVELY: If you only need view-access to the code, click the green "Code" button near the top of this page then click "Download ZIP". Unzip this file into your desired folder. Skip to step 5.
 
 4. If neither of the above commands work, that means you have yet to set up a personal access token or SSH on your device. Follow:
    - [this guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to create a personal access token (recommended for single use)
@@ -55,15 +56,80 @@ Below are the steps to viewing this website locally:
 
 The site auto-updates based on CSV file data in ```umeb/assets/data/```, for the most part. There are specific instructions to update these files, as the JavaScript code expects a certain format. These expectations are outlined below.
 
-Changes beyond updating these files require knowledge in HTML/CSS/JavaScript. Instructions to do this are not included below.
+Important CSV formatting notes:
+* **Any CSV fields containing a comma must be wrapped in quotes.**
+* New lines within a CSV field are not currently supported in this project.
+* If you are having issues making changes, import the CSV file into Google Sheets. After making changes, you can download the sheet as a CSV file to replace the original.
+
+Changes beyond updating these files are non-trivial and require knowledge in HTML/CSS/JavaScript. Instructions to do this are not included below.
 
 ### Updating Sponsors
 
 Sponsor data is in ```umeb/assets/data/sponsors/``` in files ```platinum.csv```, ```gold.csv```, ```silver.csv```, and ```bronze.csv```. On the website, this data is displayed in the site footer and the "Sponsor" subpage.
 
+The columns in ```platinum.csv``` and ```gold.csv``` are:
+* _name_ - sponsor name
+* _image_path_ - relative path to logo image, rooted at ```umeb/```
+* _url_ - URL of the sponsor's website. Use ```about:blank``` if they don't have a website.
+* _paragraph_ - blurb about the sponsor. MUST be wrapped in quotes.
+
+The columns in ```silver.csv``` and ```bronze.csv``` are:
+* _name_ - sponsor name
+* _image_path_ - relative path to logo image, rooted at ```umeb/```
+* _url_ - URL of the sponsor's website. Use ```about:blank``` if they don't have a website.
+
+#### Adding a Sponsor
+
+Modify the respective CSV file to reflect the new sponsor. Then put the sponsor logo in ```umeb/assets/img/sponsors/``` and reflect the image's name in the image_path attribute of the CSV file. Note that sponsors will appear on the page in the same order as the CSV file.
+
+#### Removing a Sponsor
+
+Simply remove the sponsor's row from the respective CSV file. We strongly recommend deleting the corresponding logo from ```umeb/assets/img/sponsors/```, but the logo will not show up without it's image_path in a CSV file.
+
 ### Updating Team Members
 
 Team member data is in the file ```umeb/assets/data/team.csv```. On the website, this data is displayed on the "Team" subpage.
+
+The columns in ```team.csv``` are:
+* _name_ - member name
+* _major_ - member major. For multiple majors, separate with a ```/``` symbol (e.g. "Computer Science / Physics").
+* _subteam_ - member subteam. Note that subteams will show up on the webpage in order of appearance in the CSV file.
+    * 1 = Leadership (i.e. Captain, Chief Engineer)
+    * 2 = Directors (i.e. Electrical Director, Business Director, etc)
+    * 3 = Project Leads (i.e. Software Lead, Controls Lead, etc)
+    * 4 = Software
+    * 5 = Controls
+    * 6 = Powertrain
+    * 7 = Structures
+    * 8 = Drivetrain
+    * 9 = Operations
+    * 10 = Business
+    * 11 = Cooling
+* _role_ - member role. Blank for members below "Project Lead".
+* _image_path_ - relative path to headshot, rooted at ```umeb/```
+
+#### Adding a Member
+
+Modify ```team.csv``` to reflect the new team member. Then put their picture in ```umeb/assets/img/headshots/``` and reflect the image's name in the image_path attribute of the CSV file.
+
+Note that members will appear in their subteam section in the same order as the CSV file.
+
+Reminders:
+* Separate multiple majors with a ```/``` symbol (e.g. "Computer Science / Physics").
+* Leave the _role_ field blank unless the member is an Admin or Lead.
+* Leave the _image_path_ field blank to use the default picture.
+* When leaving a field blank, make sure to still include commas (except at the end).
+    * For example, to add a member with no role or headshot, use the format: "Jane Doe,Business,10,,"
+
+#### Removing a Member
+
+Simply remove the members's row from the respective CSV file. We strongly recommend deleting the corresponding headshot from ```umeb/assets/img/headshots/```, but the headshot will not show up without it's image_path in the CSV file.
+
+#### Updating Subteams
+
+The CSV _subteam_ index to text mapping is at the top of the ```team.js``` file in the ```umeb/assets/js/``` directory. Update the ```subteams``` variable to make changes.
+
+BEWARE: updating this variable will affect how ```team.csv``` is read. When editing this variable, verify that the "Team" subpage loads as expected. If it does, update the CSV file to reflect your changes.
 
 ### Updating Leadership Contact Information
 
