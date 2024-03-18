@@ -3,10 +3,10 @@
 1. [Previewing the Website](#preview)
 2. [Updating the Website](#update)
     - [Sponsors](#update-sponsors)
-    - [Team](#update-team)
-    - [Contact](#update-contact)
-    - [Social Media Pages](#update-social)
-    - [Boats](#update-boats)
+    - [Team Page](#update-team)
+    - [Contact Page](#update-contact)
+    - [Social Media Links](#update-social)
+    - [Boats Page](#update-boats)
     - [Heros (Header Images)](#update-heros)
 
 ## TODOs:
