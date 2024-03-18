@@ -9,19 +9,6 @@
     - [Boats Page](#update-boats)
     - [Heros (Header Images)](#update-heros)
 
-## TODOs:
-
-- [ ] Add pictures of the rest of the team to umeb/assets/img/headshots/
-- [ ] Add remaining team members to umeb/assets/data/team.csv
-- [ ] Allow sponsor logos to link to sponsor website
-- [ ] Add remaining sponsor website urls to umeb/assets/data/sponsors/
-- [ ] Embed sponsor packet to sponsor page
-- [ ] Add "Races" page with info from umeb.vercel.app
-- [ ] Fix "Team" page lag due to map implementation (consider dividing subteams into separate CSVs -- like /sponsors/)
-- [ ] Integrate with Jekyll
-- [ ] Push site to umeb.engin.umich.edu
-- [ ] Add separators in the footer (between the body and the beginning of the footer AND between the social media accounts and platinum sponsors)
-
 ## Previewing the Website <a name="preview"></a>
 
 Below are the steps to viewing this website locally:
