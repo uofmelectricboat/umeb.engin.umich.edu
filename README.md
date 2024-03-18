@@ -1,5 +1,7 @@
 # UMEB Website
 
+**Do NOT edit the CSV files without reading through [Updating the Website](#update) for formatting rules AND verifying the output by [Previewing the Website](#preview)!!!**
+
 1. [Previewing the Website](#preview)
 2. [Updating the Website](#update)
     - [Sponsors](#update-sponsors)
