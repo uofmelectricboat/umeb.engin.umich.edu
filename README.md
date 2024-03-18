@@ -93,18 +93,18 @@ Team member data is in the file ```umeb/assets/data/team.csv```. On the website,
 The columns in ```team.csv``` are:
 * _name_ - member name
 * _major_ - member major. For multiple majors, separate with a ```/``` symbol (e.g. "Computer Science / Physics").
-* _subteam_ - member subteam. Note that subteams will show up on the webpage in order of appearance in the CSV file.
-    * 1 = Leadership (i.e. Captain, Chief Engineer)
-    * 2 = Directors (i.e. Electrical Director, Business Director, etc)
-    * 3 = Project Leads (i.e. Software Lead, Controls Lead, etc)
-    * 4 = Software
-    * 5 = Controls
-    * 6 = Powertrain
-    * 7 = Structures
-    * 8 = Drivetrain
-    * 9 = Operations
-    * 10 = Business
-    * 11 = Cooling
+* _subteam_ - member subteam
+    * 0 = Leadership (i.e. Captain, Chief Engineer)
+    * 1 = Directors (i.e. Electrical Director, Business Director, etc)
+    * 2 = Project Leads (i.e. Software Lead, Controls Lead, etc)
+    * 3 = Software
+    * 4 = Controls
+    * 5 = Powertrain
+    * 6 = Structures
+    * 7 = Drivetrain
+    * 8 = Operations
+    * 9 = Business
+    * 10 = Cooling
 * _role_ - member role. Blank for members below "Project Lead".
 * _image_path_ - relative path to headshot, rooted at ```umeb/```
 
@@ -129,7 +129,9 @@ Simply remove the members's row from the respective CSV file. We strongly recomm
 
 The CSV _subteam_ index to text mapping is at the top of the ```team.js``` file in the ```umeb/assets/js/``` directory. Update the ```subteams``` variable to make changes.
 
-BEWARE: updating this variable will affect how ```team.csv``` is read. When editing this variable, verify that the "Team" subpage loads as expected. If it does, update the CSV file to reflect your changes.
+BEWARE: updating this variable will affect how ```team.csv``` is read. When editing this variable, verify that the "Team" subpage loads as expected. If not, update the CSV file to reflect your changes.
+
+Note that subteams on the webpage are ordered by ```subteams```.
 
 ### Updating Leadership Contact Information
 
