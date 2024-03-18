@@ -20,7 +20,7 @@ Below are the steps to viewing this website locally:
 3. Run the command:
    - ```git clone https://github.com/uofmelectricboat/umeb.engin.umich.edu.git``` (to use your personal access token)
    - OR ```git clone git@github.com:uofmelectricboat/umeb.engin.umich.edu.git``` (to use your SSH key)
-   - ALTERNATIVELY: If you only need view-access to the code, click the green "Code" button near the top of this page then click "Download ZIP". Unzip this file into your desired folder. Skip to step 5.
+   - ALTERNATIVELY: If you only need view-access to the code, click the green "Code" button near the top of this page then click "Download ZIP". Unzip the file into your desired folder. Skip to step 5.
 
 4. If neither of the above commands work, that means you have yet to set up a personal access token or SSH on your device. Follow:
    - [this guide](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to create a personal access token (recommended for single use)
