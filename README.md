@@ -54,8 +54,9 @@ The site auto-updates based on CSV file data in ```umeb/assets/data/```, for the
 
 Important CSV formatting notes:
 * **Any CSV fields containing a comma must be wrapped in quotes.**
+* ```team.csv``` currently does not support commas within fields, even when wrapped in quotes.
 * New lines within a CSV field are not currently supported in this project.
-* If you are having issues making changes, import the CSV file into Google Sheets. After making changes, you can download the sheet as a CSV file to replace the original.
+* If you are having issues making changes, import the CSV file into Google Sheets or Microsoft Excel. After making changes, you can download the sheet as a CSV file to replace the original.
 
 Changes beyond updating these files are non-trivial and require knowledge in HTML/CSS/JavaScript. Instructions to do this are not included below.
 
