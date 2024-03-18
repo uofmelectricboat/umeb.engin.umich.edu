@@ -20,6 +20,7 @@
 - [ ] Fix "Team" page lag due to map implementation (consider dividing subteams into separate CSVs -- like /sponsors/)
 - [ ] Integrate with Jekyll
 - [ ] Push site to umeb.engin.umich.edu
+- [ ] Add separators in the footer (between the body and the beginning of the footer AND between the social media accounts and platinum sponsors)
 
 ## Previewing the Website <a name="preview"></a>
 
