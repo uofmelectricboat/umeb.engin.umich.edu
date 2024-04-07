@@ -430,7 +430,17 @@ Stylesheet: Sections
 /******************************************************************
 Author: Megan Miller (2024)
 
-Stylesheet: Team
+Stylesheet: Custom Cursor
+******************************************************************/
+
+body {
+    cursor: url('/assets/img/cursor.png'), auto;
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Teampage
 ******************************************************************/
 
 .subteam-container {

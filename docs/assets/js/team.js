@@ -2,18 +2,39 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTeam();
 });
 
-// TODO: linkedin links
-// TODO: split by subteam (see data/sponsors/)
-
 function loadTeam() {
+
+    /*********************
+    UPDATE SUBTEAMS HERE
+    - make sure to verify result in Live Preview
+    - update team.csv if needed
+    *********************/
+    const subteamsMap = new Map([
+        ["0", "Leadership"],
+        ["1", "Project Leads"],
+        ["2", "Software"],
+        ["3", "Controls"],
+        ["4", "Powertrain"],
+        ["5", "Structures"],
+        ["6", "Drivetrain"],
+        ["7", "Operations"],
+        ["8", "Business"],
+        ["9", "Cooling"]
+    ]);
+
     fetch('/assets/data/team.csv')
     .then(response => response.text())
     .then(data => {
         const teamContainer = document.getElementById('umeb-team');
-        const subteamsMap = compileSubteams(data);
-        for (const [subteam, members] of subteamsMap.entries()) {
-            const section = createSection(subteam, members);
-            teamContainer.appendChild(section);
+        const membersMap = compileSubteams(data);
+        for (let i=0; i<subteamsMap.size; ++i) {
+            const index = i.toString();
+            const subteam = subteamsMap.get(index);
+            const members = membersMap.get(index);
+            if (members && members.length > 0) {
+                const section = createSection(subteam, members);
+                teamContainer.appendChild(section);
+            }
         }
     })
     .catch(err => console.error('Error loading CSV:', err));
@@ -47,7 +68,7 @@ function createSection(subteam, members) {
 }
 
 function compileSubteams(data) {
-    const subteamsMap = new Map();
+    const membersMap = new Map();
     const rows = data.split('\n');
 
     for (let i = 1; i < rows.length; i++) {
@@ -57,14 +78,14 @@ function compileSubteams(data) {
             imagePath = '/assets/img/headshots/default.png';
         }
 
-        if (!subteamsMap.has(subteam)) {
-            subteamsMap.set(subteam, []);
+        if (!membersMap.has(subteam)) {
+            membersMap.set(subteam, []);
         }
 
-        subteamsMap.get(subteam).push({ name, major, role, imagePath });
+        membersMap.get(subteam).push({ name, major, role, imagePath });
     }
 
-    return subteamsMap;
+    return membersMap;
 }
 
 /*********************

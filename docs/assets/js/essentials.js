@@ -91,6 +91,11 @@ SITE HEROS
 *********************/
 
 function loadHeros() {
+
+    /*********************
+    UPDATE HEROS HERE
+    - make sure to verify result in Live Preview
+    *********************/
     const heros = { 'main-hero'     : '/assets/img/heros/main.jpg',
                     'boats-hero'    : '/assets/img/heros/boats.jpg',
                     'team-hero'     : '/assets/img/heros/team.jpg',
