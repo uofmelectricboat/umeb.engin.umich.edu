@@ -1,0 +1,561 @@
+/*********************
+FONTS
+*********************/
+@font-face {
+    font-family: 'Supreme';
+    src: url('/assets/fonts/Supreme-Variable.woff2') format('woff2'),
+         url('/assets/fonts/Supreme-Variable.woff') format('woff');
+    font-weight: 100 800;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/assets/fonts/BebasNeue-Regular.woff') format('woff');
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/assets/fonts/Satoshi-Variable.woff') format('woff');
+    font-weight: 100 1000;
+}
+
+/*********************
+BASIC STYLING
+*********************/
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 400 16px 'Supreme', Arial, sans-serif;
+    color: #00274C;
+    background-color: #fdfdfd;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul, ol {
+    margin-left: 30px;
+}
+ 
+li > ul, li > ol {
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+ 
+a {
+    color: #2a7ae2;
+    text-decoration: none; }
+    a:visited {
+        color: #1756a9; }
+    a:hover {
+        color: #5c6b80;
+        text-decoration: underline;
+}
+ 
+.wrapper, .social-media-wrapper {
+    max-width: -webkit-calc(1200px - (30px * 2));
+    max-width: calc(1200px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 910px) {
+    .wrapper, .social-media-wrapper {
+        max-width: -webkit-calc(1200px - (30px));
+        max-width: calc(1200px - (30px));
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+ 
+.social-media-wrapper {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 17.1428571429px;
+}
+    
+.social-media-wrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper:after, .social-media-wrapper:after, .home .join-donate-cta .wrap:after, .home .join-donate-cta .sponsor-us-page .sponsor_us_wrapper:after, .sponsor-us-page .home .join-donate-cta .sponsor_us_wrapper:after, .footer-col-wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.button-hollow {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 34px;
+    padding: 0 24px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+
+.button-hollow:hover, .button-hollow:focus {
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+.button-hollow:active {
+    top: 1px;
+}
+  
+.button-hollow {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.button-hollow:hover, .button-hollow:focus {
+    background-color: black;
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Header + Footer
+******************************************************************/
+
+.site-header {
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 56px;
+    padding: 20px;
+    position: relative;
+}
+
+.site-header .trigger a {
+    border-bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #323944;
+    margin-left: 20px;
+}
+
+.site-header .trigger a:hover, .site-header .trigger a:focus {
+    color: #F8C726;
+    text-decoration: none;
+}
+
+.site-title {
+    font-size: 26px;
+    line-height: 56px;
+    float: left;
+}
+
+.site-header .site-logo > img {
+    display: inline-block;
+    width: 170px;
+    vertical-align: middle;
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+    margin-top: 3px;
+}
+
+.site-nav .nav-link {
+    color: #5c6b80;
+    line-height: 1.5;
+    vertical-align: center;
+}
+    
+@media screen and (max-width: 700px) {
+    .site-nav {
+        position: absolute;
+        top: 34px;
+        right: 15px;
+        background-color: #fdfdfd;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        text-align: right;
+    }
+
+    .site-nav .menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .site-nav .trigger {
+        clear: both;
+        display: none;
+    }
+
+    .site-nav:hover .trigger {
+        display: block;
+        padding-bottom: 5px;
+    }
+
+    .site-nav .nav-link {
+        display: block;
+        padding: 5px 10px;
+        margin-right: 0;
+        margin-left: 20px;
+    }
+}
+
+.site-footer {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+  
+.site-footer .row {
+    margin-bottom: 20px;
+}
+  
+.site-footer .socials-container {
+    margin: 0px 10px;
+}
+
+.site-footer .social-icon {
+    margin: 0px 5px;
+}
+
+#sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em; /* Space between items */
+    justify-content: center; /* Center items horizontally in the container */
+    align-items: center; /* Center items vertically in the container */
+    margin: 2em; /* Margin from the edge of the webview */
+    max-width: calc(100% - 4em); /* Ensure max width takes margins into account */
+}
+
+.sponsor-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+}
+
+.sponsor-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Helps center the image within the .sponsor-logo div */
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Heros
+******************************************************************/
+
+.hero {
+    height: 440px;
+    background-color: #323944;
+    background-position: center 58.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .hero-content {
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    padding: 80px 0;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .hero {
+        height: 600px;
+    }
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Banners
+******************************************************************/
+
+.banner {
+    width: 100%;
+    background-color: #00274C;
+    text-align: center;
+}
+
+.banner p {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 36px;
+    color: #fdfdfd;
+}
+
+.banner-text {
+    margin: 20px;
+}
+
+.centered-banner-text {
+    margin: 0;
+    text-align: center;
+}
+
+.sub-banner {
+    background-color: #00274C;
+    text-align: center;
+}
+
+.sub-banner p {
+    padding: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fdfdfd;
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Sections
+******************************************************************/
+
+.even-row, .odd-row {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    flex-direction: row;
+}
+
+.odd-row {
+    background-color: #D3E2F5;
+    flex-direction: row-reverse;
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-image {
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.section-content, .section-image {
+    margin: 5vw 10vw;
+}
+
+.even-row .section-content, .odd-row .section-image {
+    margin-right: 2vw;
+}
+
+.odd-row .section-content, .even-row .section-image {
+    margin-left: 2vw;
+}
+
+.section-image img {
+    max-width: 30vw;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .even-row, .odd-row {
+        flex-direction: column;
+    }
+
+    .section-content, .section-image {
+        margin: 5vw;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .odd-row .section-content, .even-row .section-image, .even-row .section-content, .odd-row .section-image {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .section-image img {
+        max-width: 60vw;
+    }
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Custom Cursor
+******************************************************************/
+
+body {
+    cursor: url('/assets/img/cursor.png'), auto;
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Teampage
+******************************************************************/
+
+.subteam-container {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+}
+
+.member-container {
+    padding: 2em;
+    text-align: center;
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+.member-name {
+    font-weight: bold;
+    margin: 0.5em 0 0.25em;
+}
+
+.member-role {
+    margin: 0.25em 0;
+    font-style: italic;
+}
+
+.member-major {
+    margin: 0.25em 0;
+    color: #555;
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Sponsor
+******************************************************************/
+
+.sponsor-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+}
+
+.sponsor-card {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1em;
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Contact
+******************************************************************/
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.contact-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5em;
+    text-align: center;
+    padding: 20px;
+    width: 60vw;
+}
+
+.contact-title, .contact-name, .contact-email {
+    margin: 0 0 10px 0;
+    padding: 5px 0;
+}
+
+.contact-email {
+    margin-bottom: 0;
+}
+
+/******************************************************************
+Author: Megan Miller (2024)
+
+Stylesheet: Join
+******************************************************************/
+
+.google-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+iframe {
+    width: 80%;
+    height: 1500px;
+}
