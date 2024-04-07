@@ -11,16 +11,15 @@ function loadTeam() {
     *********************/
     const subteamsMap = new Map([
         ["0", "Leadership"],
-        ["1", "Directors"],
-        ["2", "Project Leads"],
-        ["3", "Software"],
-        ["4", "Controls"],
-        ["5", "Powertrain"],
-        ["6", "Structures"],
-        ["7", "Drivetrain"],
-        ["8", "Operations"],
-        ["9", "Business"],
-        ["10", "Cooling"]
+        ["1", "Project Leads"],
+        ["2", "Software"],
+        ["3", "Controls"],
+        ["4", "Powertrain"],
+        ["5", "Structures"],
+        ["6", "Drivetrain"],
+        ["7", "Operations"],
+        ["8", "Business"],
+        ["9", "Cooling"]
     ]);
 
     fetch('/assets/data/team.csv')
