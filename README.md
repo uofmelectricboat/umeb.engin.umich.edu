@@ -93,17 +93,16 @@ The columns in ```team.csv``` are:
 * _name_ - member name
 * _major_ - member major. For multiple majors, separate with a ```/``` symbol (e.g. "Computer Science / Physics").
 * _subteam_ - member subteam
-    * 0 = Leadership (i.e. Captain, Chief Engineer)
-    * 1 = Directors (i.e. Electrical Director, Business Director, etc)
-    * 2 = Project Leads (i.e. Software Lead, Controls Lead, etc)
-    * 3 = Software
-    * 4 = Controls
-    * 5 = Powertrain
-    * 6 = Structures
-    * 7 = Drivetrain
-    * 8 = Operations
-    * 9 = Business
-    * 10 = Cooling
+    * 0 = Leadership (i.e. Captain, Chief Engineer, Directors)
+    * 1 = Project Leads (i.e. Software Lead, Controls Lead, etc)
+    * 2 = Software
+    * 3 = Controls
+    * 4 = Powertrain
+    * 5 = Structures
+    * 6 = Drivetrain
+    * 7 = Operations
+    * 8 = Business
+    * 9 = Cooling
 * _role_ - member role. Blank for members below "Project Lead".
 * _image_path_ - relative path to headshot, rooted at ```umeb/```
 
