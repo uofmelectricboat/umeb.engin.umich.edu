@@ -1,13 +1,13 @@
 name,major,subteam,role,image_path
-Lyn Tran,Naval Architecture and Marine Engineering,0,Captain,/assets/img/headshots/lyn_tran.jpg
+Lyn Tran,Naval Architecture and Marine Engineering,0,Captain,./assets/img/headshots/lyn_tran.jpg
 Ashley Goodrich,Mechanical Engineering,0,Chief Engineer,
-Andrew Dailey,Computer Engineering,0,Electrical Director,/assets/img/headshots/andrew_dailey.jpg
-Ben Bickel,Mechnical Engineering,0,Mechanical Director,/assets/img/headshots/ben_bickel.jpg
-Nick Robbins,Business,0,Operations Director,/assets/img/headshots/nick_robbins.jpg
+Andrew Dailey,Computer Engineering,0,Electrical Director,./assets/img/headshots/andrew_dailey.jpg
+Ben Bickel,Mechnical Engineering,0,Mechanical Director,./assets/img/headshots/ben_bickel.jpg
+Nick Robbins,Business,0,Operations Director,./assets/img/headshots/nick_robbins.jpg
 Kaden Murphy,Business,0,Business Director,/assets/img/headshots/kaden_murphy.jpg
-Megan Miller,Computer Science,1,Software Lead,/assets/img/headshots/megan_miller.jpg
-Luke Aldrich,Chemical Engineering,1,Drivetrain Lead,/assets/img/headshots/luke_aldrich.jpg
-Michael Sharashenidze,Electrical Engineering,3,,/assets/img/headshots/michael_sharashenidze.jpg
-Oscar Rosen,Physics,4,,/assets/img/headshots/oscar_rosen.jpg
-Nick Somsel,Industrial and Operations Engineering,6,,/assets/img/headshots/nick_somsel.jpg
-Tyler VanderLugt,Data Science,6,,/assets/img/headshots/tyler_vanderlugt.jpg
+Megan Miller,Computer Science,1,Software Lead,./assets/img/headshots/megan_miller.jpg
+Luke Aldrich,Chemical Engineering,1,Drivetrain Lead,./assets/img/headshots/luke_aldrich.jpg
+Michael Sharashenidze,Electrical Engineering,3,,./assets/img/headshots/michael_sharashenidze.jpg
+Oscar Rosen,Physics,4,,./assets/img/headshots/oscar_rosen.jpg
+Nick Somsel,Industrial and Operations Engineering,6,,./assets/img/headshots/nick_somsel.jpg
+Tyler VanderLugt,Data Science,6,,./assets/img/headshots/tyler_vanderlugt.jpg

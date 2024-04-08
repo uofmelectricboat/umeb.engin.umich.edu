@@ -13,7 +13,7 @@ function loadHeader() {
     "<div class='wrapper'>"
         + "<a class='site-title' href='/'>"
             + "<span class='site-logo'>"
-                + "<img src='/assets/img/logo.png'>"
+                + "<img src='./assets/img/logo.png'>"
             + "</span>"
         + "</a>"
     + "<nav class='site-nav'>"
@@ -96,12 +96,12 @@ function loadHeros() {
     UPDATE HEROS HERE
     - make sure to verify result in Live Preview
     *********************/
-    const heros = { 'main-hero'     : '/assets/img/heros/main.jpg',
-                    'boats-hero'    : '/assets/img/heros/boats.jpg',
-                    'team-hero'     : '/assets/img/heros/team.jpg',
-                    'sponsor-hero'  : '/assets/img/heros/sponsor.jpg',
-                    'contact-hero'  : '/assets/img/heros/contact.jpg',
-                    'join-hero'     : '/assets/img/heros/join.jpg'};
+    const heros = { 'main-hero'     : './assets/img/heros/main.jpg',
+                    'boats-hero'    : './assets/img/heros/boats.jpg',
+                    'team-hero'     : './assets/img/heros/team.jpg',
+                    'sponsor-hero'  : './assets/img/heros/sponsor.jpg',
+                    'contact-hero'  : './assets/img/heros/contact.jpg',
+                    'join-hero'     : './assets/img/heros/join.jpg'};
     
     for (const [elementId, imagePath] of Object.entries(heros)) {
         const heroContainer = document.getElementById(elementId);

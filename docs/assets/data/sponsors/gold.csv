@@ -1,3 +1,3 @@
 name,image_path,url,paragraph
-Beyond Motors,/assets/img/sponsors/beyond-motors.png,about:blank,"Axial flux e-motors are the next step in electric propulsion solutions. Used in marine, aviation, automotive and racing industries across the globe. Beyond Motors have the best continuous power-to-weight ratio on the market, and work in the most robust applications."
-Treetown Tech,/assets/img/sponsors/treetown-tech.png,https://www.treetowntech.com/,""
+Beyond Motors,./assets/img/sponsors/beyond-motors.png,about:blank,"Axial flux e-motors are the next step in electric propulsion solutions. Used in marine, aviation, automotive and racing industries across the globe. Beyond Motors have the best continuous power-to-weight ratio on the market, and work in the most robust applications."
+Treetown Tech,./assets/img/sponsors/treetown-tech.png,https://www.treetowntech.com/,""

@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    loadSponsorSections('/assets/data/sponsors/platinum.csv', 'Platinum')
-    .then(() => loadSponsorSections('/assets/data/sponsors/gold.csv', 'Gold'))
-    .then(() => loadSponsorLogos('/assets/data/sponsors/silver.csv', 'Silver'))
-    .then(() => loadSponsorLogos('/assets/data/sponsors/bronze.csv', 'Bronze'))
+    loadSponsorSections('./assets/data/sponsors/platinum.csv', 'Platinum')
+    .then(() => loadSponsorSections('./assets/data/sponsors/gold.csv', 'Gold'))
+    .then(() => loadSponsorLogos('./assets/data/sponsors/silver.csv', 'Silver'))
+    .then(() => loadSponsorLogos('./assets/data/sponsors/bronze.csv', 'Bronze'))
     .catch(err => console.error('Error loading CSV:', err));
 });
 

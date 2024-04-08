@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadContact() {
-    fetch('/assets/data/contact.csv')
+    fetch('./assets/data/contact.csv')
     .then(response => response.text())
     .then(data => {
         const contactsContainer = document.getElementById('umeb-contact');
