@@ -11,7 +11,7 @@ SITE HEADER
 function loadHeader() {
     document.getElementById("umeb-header").innerHTML =
     "<div class='wrapper'>"
-        + "<a class='site-title' href='/'>"
+        + "<a class='site-title' href='./'>"
             + "<span class='site-logo'>"
                 + "<img src='./assets/img/logo.png'>"
             + "</span>"
@@ -49,7 +49,7 @@ function createContainer(id) {
 }
 
 function fetchSocials() {
-    fetch('/assets/data/socials.csv')
+    fetch('./assets/data/socials.csv')
     .then(response => response.text())
     .then(data => {
         const socialsContainer = document.getElementById('socials-container');
@@ -65,7 +65,7 @@ function fetchSocials() {
 }
 
 function fetchSponsors() {
-    fetch('/assets/data/sponsors/platinum.csv')
+    fetch('./assets/data/sponsors/platinum.csv')
     .then(response => response.text())
     .then(data => {
         const sponsorsContainer = document.getElementById('sponsors-container');
