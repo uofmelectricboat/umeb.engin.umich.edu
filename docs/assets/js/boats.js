@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadBoats() {
-    fetch('./assets/data/boats.csv')
+    fetch('/assets/data/boats.csv')
     .then(response => response.text())
     .then(data => {
         const boatsContainer = document.getElementById('umeb-boats');

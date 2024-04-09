@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadValues() {
-    fetch('./assets/data/values.csv')
+    fetch('/assets/data/values.csv')
     .then(response => response.text())
     .then(data => {
         const valuesContainer = document.getElementById('umeb-values');

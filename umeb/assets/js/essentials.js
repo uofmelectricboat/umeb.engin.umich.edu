@@ -20,11 +20,11 @@ function loadHeader() {
         + "<a href='#' class='menu-icon'>"
             + "<div class='trigger'>"
                 + "<a class='nav-link' href='/'>Home</a>"
-                + "<a class='nav-link' href='/pages/boats'>Boats</a>"
-                + "<a class='nav-link' href='/pages/team'>Team</a>"
-                + "<a class='nav-link' href='/pages/sponsor'>Sponsor</a>"
-                + "<a class='nav-link' href='/pages/contact'>Contact</a>"
-                + "<a class='nav-link' href='/pages/join'>Join</a>"
+                + "<a class='nav-link' href='/boats'>Boats</a>"
+                + "<a class='nav-link' href='/team'>Team</a>"
+                + "<a class='nav-link' href='/sponsor'>Sponsor</a>"
+                + "<a class='nav-link' href='/contact'>Contact</a>"
+                + "<a class='nav-link' href='/join'>Join</a>"
             + "</div>"
         + "</nav>"
     + "</div>"
@@ -49,7 +49,7 @@ function createContainer(id) {
 }
 
 function fetchSocials() {
-    fetch('./assets/data/socials.csv')
+    fetch('/assets/data/socials.csv')
     .then(response => response.text())
     .then(data => {
         const socialsContainer = document.getElementById('socials-container');
@@ -65,7 +65,7 @@ function fetchSocials() {
 }
 
 function fetchSponsors() {
-    fetch('./assets/data/sponsors/platinum.csv')
+    fetch('/assets/data/sponsors/platinum.csv')
     .then(response => response.text())
     .then(data => {
         const sponsorsContainer = document.getElementById('sponsors-container');
@@ -96,12 +96,12 @@ function loadHeros() {
     UPDATE HEROS HERE
     - make sure to verify result in Live Preview
     *********************/
-    const heros = { 'main-hero'     : './assets/img/heros/main.jpg',
-                    'boats-hero'    : './assets/img/heros/boats.jpg',
-                    'team-hero'     : './assets/img/heros/team.jpg',
-                    'sponsor-hero'  : './assets/img/heros/sponsor.jpg',
-                    'contact-hero'  : './assets/img/heros/contact.jpg',
-                    'join-hero'     : './assets/img/heros/join.jpg'};
+    const heros = { 'main-hero'     : '/assets/img/heros/main.jpg',
+                    'boats-hero'    : '/assets/img/heros/boats.jpg',
+                    'team-hero'     : '/assets/img/heros/team.jpg',
+                    'sponsor-hero'  : '/assets/img/heros/sponsor.jpg',
+                    'contact-hero'  : '/assets/img/heros/contact.jpg',
+                    'join-hero'     : '/assets/img/heros/join.jpg'};
     
     for (const [elementId, imagePath] of Object.entries(heros)) {
         const heroContainer = document.getElementById(elementId);

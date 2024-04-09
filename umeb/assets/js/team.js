@@ -22,7 +22,7 @@ function loadTeam() {
         ["9", "Cooling"]
     ]);
 
-    fetch('./assets/data/team.csv')
+    fetch('/assets/data/team.csv')
     .then(response => response.text())
     .then(data => {
         const teamContainer = document.getElementById('umeb-team');
@@ -75,7 +75,7 @@ function compileSubteams(data) {
         [name, major, subteam, role, imagePath] = rows[i].split(',').map(item => item.trim());
 
         if (!imagePath) {
-            imagePath = './assets/img/headshots/default.png';
+            imagePath = '/assets/img/headshots/default.png';
         }
 
         if (!membersMap.has(subteam)) {
