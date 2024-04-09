@@ -1,0 +1,35 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: University of Michigan Electric Boat Team
+email: electricboat@umich.edu
+description: >- # this means to ignore newlines until "baseurl:"
+  The University of Michigan Electric Boat project team (UMEB)... TODO
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://uofmelectricboat.github.io/umeb.engin.umich.edu" # the base hostname & protocol for your site
+github_username:  uofmelectricboat
+
+# Build settings
+markdown: kramdown
+
+# Make Jekyll build site to the docs folder, not umeb/_site
+destination: ../docs
+
+# Include the CNAME file in builds so that it ends up in docs,
+# so that Github Pages can display our website at umeb.engin.umich.edu
+include: ["CNAME"]
+
+# Exclude things that aren't meant to be included in the build
+exclude:
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
