@@ -14,8 +14,8 @@ title: University of Michigan Electric Boat Team
 email: electricboat@umich.edu
 description: >- # this means to ignore newlines until "baseurl:"
   The University of Michigan Electric Boat project team (UMEB)... TODO
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://uofmelectricboat.github.io/umeb.engin.umich.edu" # the base hostname & protocol for your site
+baseurl: "/umeb.engin.umich.edu" # the subpath of your site, e.g. /blog
+url: "https://uofmelectricboat.github.io" # the base hostname & protocol for your site
 github_username:  uofmelectricboat
 
 # Build settings
